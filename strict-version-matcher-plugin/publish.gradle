@@ -55,6 +55,10 @@ publishing {
 }
 
 publishing.repositories.maven {
-    url "$buildDir/repo"
+    url RELEASE_REPOSITORY_URL
+    credentials {
+        username = MAVEN_USERNAME
+        password = MAVEN_PASSWORD
+    }
 }
 
